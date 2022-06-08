@@ -25,7 +25,3 @@ patches:
       - op: add
         path: /spec/selector/env
         value: development
-images:
-  - name: ads/titris
-    newName: ads-repo.dev.o-in.nicovideo.jp:8083/ads/titris
-    newTag: 2.0.5_eb05075

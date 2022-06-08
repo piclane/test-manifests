@@ -28,6 +28,8 @@ spec:
     - match:
         - uri:
             prefix: /titris/
+      rewrite:
+        uri: /
       route:
         - destination:
             host: titris-service
