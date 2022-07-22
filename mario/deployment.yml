@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mario-deployment
+  labels:
+    app: mario
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mario
+  template:
+    metadata:
+      labels:
+        app: mario
+    spec:
+      imagePullSecrets:
+        - name: nexus-secret
+      containers:
+        - name: mario-container
+          image: pengbai/docker-supermario:latest
+          ports:
+            - name: http-port
+              containerPort: 8080
+          livenessProbe:
+             httpGet:
+               port: http-port
+               path: /index.html
+             initialDelaySeconds: 3
+             periodSeconds: 10
+          imagePullPolicy: Always
