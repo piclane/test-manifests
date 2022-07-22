@@ -5,3 +5,4 @@ resources:
   - deployment.yml
   - svc.yml
   - ns.yml
+  - ingress.yml
