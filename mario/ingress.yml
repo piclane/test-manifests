@@ -5,7 +5,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/group.name: private-group
+    alb.ingress.kubernetes.io/group.name: internal-group
     alb.ingress.kubernetes.io/group.order: "2"
     alb.ingress.kubernetes.io/subnets: subnet-072e50be3db51dc28, subnet-07914ee5285b48ecd
     external-dns.alpha.kubernetes.io/hostname: mario.ads.dev.nicovideo.jp
